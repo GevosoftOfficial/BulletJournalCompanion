@@ -91,6 +91,8 @@
 							<div class="col-xs-6 col-sm-6 col-md-5">
 								<div>
 									<a href="#features" class="polo-btn store wow animated bounceInUp"><i class="ion-social-info"></i> Learn More</a>
+								<!-- Trigger/Open The Modal -->
+<button id="myBtn">Bullet Journal Companion Web!</button>
 								</div>
 							</div>
 						</div>
@@ -325,8 +327,8 @@ var btn = document.getElementById("myBtn");
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When page loads, open the modal 
-bwindow.onload = function() {
+// When the user clicks the button, open the modal 
+btn.onclick = function() {
     modal.style.display = "block";
 }
 
@@ -342,6 +344,7 @@ window.onclick = function(event) {
     }
 }
 </script>
+
 
 	<!-- All the scripts -->
 
