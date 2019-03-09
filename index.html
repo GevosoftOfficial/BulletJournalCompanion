@@ -1,540 +1,229 @@
 <!DOCTYPE html>
-<script type="text/javascript">
-<!--
-if (screen.width <= 699) {
-document.location = "mobile.html";
-}
-//-->
-</script>
 <html lang="en">
-<head>
-
+  <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="The Bullet Journal Companion App Extends your Analog Bullet Journal Rather Than Replacing It. The Bullet Journal Companion Is Developed By Gevosoft.">
+    <meta name="author" content="Gevosoft Technology Development">
+    <link rel="shortcut icon" href="assets/ico/favicon.png">
 
-    <title>Bullet Journal Companion | A Gevosoft Application</title>
+    <title>Bullet Journal Companion - A Gevosoft App</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+    <link rel="shortcut icon" type="image/png" href="assets/img/logo.png">
+
+    <!-- Custom styles for this template -->
+    <link href="assets/css/main.css" rel="stylesheet">
+	<link rel="stylesheet" href="assets/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="assets/js/jquery.min.js"></script>
+	<script src="assets/js/modernizr.custom.js"></script>
 
 
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/owl.carousel.css">
-    <link rel="stylesheet" href="css/owl.theme.css">
-    <link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox.css">
-    <link rel="stylesheet" href="css/nivo-lightbox/nivo-lightbox-theme.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/style.css">
 
+    <link href='http://fonts.googleapis.com/css?family=Oswald:400,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=EB+Garamond' rel='stylesheet' type='text/css'>
 
-    <script src="js/modernizr.custom.js"></script>
-    <link rel="shortcut icon" href="img/logo.png">
-        <!-- Global site tag (gtag.js) - Google Analytics -->
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="assets/js/html5shiv.js"></script>
+      <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <script>
+    $(document).ready(function(){
+      // Add smooth scrolling to all links
+      $("a").on('click', function(event) {
+
+        // Make sure this.hash has a value before overriding default behavior
+        if (this.hash !== "") {
+          // Prevent default anchor click behavior
+          event.preventDefault();
+
+          // Store hash
+          var hash = this.hash;
+
+          // Using jQuery's animate() method to add smooth page scroll
+          // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+        }, 10, function(){
+
+            // Add hash (#) to URL when done scrolling (default click behavior)
+            window.location.hash = hash;
+          });
+        } // End if
+      });
+    });
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-114360606-2"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+
   gtag('config', 'UA-114360606-2');
-</script>
+</script
 
-<script id="mcjs">!function(c,h,i,m,p){m=c.createElement(h),p=c.getElementsByTagName(h)[0],m.async=1,m.src=i,p.parentNode.insertBefore(m,p)}(document,"script","https://chimpstatic.com/mcjs-connected/js/users/9e66e664d4b763295a305cfe9/70564d1cae53f9ed2765195a1.js");</script>
+  </head>
 
-</head>
+  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
 
-<body>
+	<!-- Menu -->
+	<nav class="menu" id="theMenu">
+		<div class="menu-wrap">
+			<h1 class="logo"><a href="index.html#home">Bullet Journal Companion</a></h1>
+			<i class="icon-remove menu-close"></i>
+			<a href="#home" class="smoothScroll">Home</a>
+			<a href="#about" class="smoothScroll">About</a>
+			<a href="#portfolio" class="smoothScroll">Features</a>
+			<a href="#contact" class="smoothScroll">Contact</a>
+			<a href="https://github.com/GevosoftOfficial"><i class="icon-github"></i></a>
+			<a href="https://instagram.com/Gevosoft"><i class="icon-instagram"></i></a>
+			<a href="mailto:contact@gevosoft.com"><i class="icon-envelope"></i></a>
+		</div>
 
-    <a href="#header" id="back-to-top" class="top"><i class="fa fa-chevron-up"></i></a>
-    <!-- HHHHHHHHHHHHHHHHHH        Header          HHHHHHHHHHHHHHHH -->
-    <section id="header" class="header">
-        <div class="top-bar">
-            <div class="container">
-                <div class="navigation" id="navigation-scroll">
-                        <div class="row">
-                            <div class="col-md-11 col-xs-10">
-                                <a href="index.html"><span id="logo"><strong class="strong" style="font-size: 60px;">Bullet Journal </strong>Companion</span></a>
-                            </div>
-                            <div class="col-md-1 col-xs-2">
-                                <p class="nav-button">
-                                    <button id="trigger-overlay" type="button">
-                                    <i class="fa fa-bars"></i>
-                                    </button>
-                                </p>
-                            </div>
-                        </div><!-- /.row -->
-                    </div><!-- /.navigation -->
-                </div><!--/.container-->
-            </div><!--/.top-bar-->
+		<!-- Menu button -->
+		<div id="menuToggle"><i class="icon-reorder"></i></div>
+	</nav>
 
-<div class="container">
-            <div class="starting">
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="img/LUCY2.png" alt="LUCY" class="wow flipInY animated animated">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="banner-text">
-                             <h2 class="animation-box wow bounceIn animated"><strong class="strong">Designed Not To Replace, But To</strong><br>
-                            Extend</h2>
-                            <p>
-                                 The Bullet Journal Companion Extends The Functionality Of Your Beloved Analog Notebook. The Companion Functions As A Place For Your Log's, Page's, Notes & Everything Else When You Don't Have Your Notebook.
-                            </p>
-                            <a href="https://play.google.com/store/apps/details?id=com.com_hostsource.Bullet_Journal_Companion&hl=en_US" class="btn btn-download wow animated fadeInLeft">
-                            <i class="fa fa-android pull-left"></i>
-                            <strong>Get it on</strong>
-                            <br/>Google Play </a>
-                            <a href="http://bujoabout.ml" class="btn btn-download wow animated fadeInRight">
-                            <i class="fa fa-info pull-left"></i>
-                            <strong>Learn More</strong>
-                            <br/>Here </a>
-                        </div> <!-- /.banner-text -->
-                    </div>
-                </div>
-            </div>
-            <!-- /.starting -->
-        </div>
-        <!-- /.container -->
-    </section>
-    <!-- /#header -->
 
-    <!-- HHHHHHHHHHHHHHHHHH        Video          HHHHHHHHHHHHHHHH -->
-    <div id="video" class="wrapper">
-        <div class="container">
-            <h2 class="animation-box wow bounceIn animated">FEATURES</h2>
-            <div class="virticle-line"></div>
-            <div class="circle"></div>
-            <div style="height: 423px; width: 750px; margin-right: auto;margin-left: auto; text-align: center;">
-            <iframe width="423" height="750" src="https://www.youtube.com/embed/N7-q2YBRcfI?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        </div>
-            <p>
-                The Bullet Journal Companion Is Full Of Features And Is Constantly Improved & Updated.
-            </p>
-        </div> <!-- /.container -->
-    </div> <!-- /#video -->
 
-    <!-- HHHHHHHHHHHHHHHHHH        Bigfeature         HHHHHHHHHHHHHHHH -->
-    <section id="bigfeatures" class="img-block-3col wrapper">
+	<!-- ========== HEADER SECTION ========== -->
+	<section id="home" name="home"></section>
+	<div id="headerwrap">
+		<div class="container">
+			<div class="logo">
+				<img src="assets/img/logo.png">
+			</div>
+			<br>
+			<div class="row">
+				<h1>Bullet Journal Companion</h1>
+				<br>
+				<h3>Designed not to replace, but to <h3 style="color: #008080;">Extend...</h3></h3>
+				<br>
+				<br>
+				<div class="col-lg-6 col-lg-offset-3">
+				</div>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /headerwrap -->
 
-        <div class="container">
 
-            <div class="row">
-                <div class="col-sm-4">
-                    <ul class="item-list-right item-list-big">
-                        <li class="wow fadeInLeft animated"> <i class="fa fa-film"></i>
-                            <h3>Simple Design</h3>
-                            <p>Uses A Clean And Simple UI Without Any Clutter Or Unnecessary Potions, It Simply Just Works.</p>
-                        </li>
-                        <li class="wow fadeInLeft animated"> <i class="fa fa-bolt"></i>
-                            <h3>Sidebar</h3>
-                            <p>A Sidebar That Is Accessible From Everywhere With A Simple Swipe. The Sidebar View's Your Log's And Has Quick Navigations Buttons To Help You Quickly Navigate The App.</p>
-                        </li>
-                        <li class="wow fadeInLeft animated"> <i class="fa fa-pencil"></i>
-                            <h3>Text, Sound & Drawing Notes </h3>
-                            <p>You Can Store Text, Sound & Drawing Notes All In One Place.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 col-sm-push-4">
-                    <ul class="item-list-left item-list-big">
-                        <li class="wow fadeInRight animated"> <i class="fa fa-bell"></i>
-                            <h3>Reminders</h3>
-                            <p>You Can Set Reminders In The App To Ex. Remind You To Reflect.</p>
-                        </li>
-                        <li class="wow fadeInRight animated"> <i class="fa fa-book"></i>
-                            <h3>Store Important Pages Digitally</h3>
-                            <p>Store Your Most Important Pages In The App With A Button Click. You Will Never Have To Flip Through All Of Your Bujo's Indexes Just To Find One Page.</p>
-                        </li>
-                        <li class="wow fadeInRight animated"> <i class="fa fa-usd"></i>
-                            <h3>Free To Download & Use!</h3>
-                            <p>To Download And Use The App Is Completely Free, But You Can Always Support The Development By Donating.</p>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-sm-4 col-sm-pull-4 text-center">
-                    <div class="animation-box wow bounceIn animated">
-                        <img class="highlight-left wow animated" src="img/spark.png" height="192" width="48" alt="">
-                        <img class="highlight-right wow animated" src="img/spark.png" height="192" width="48" alt="">
-                        <img class="screen" src="img/front.png" alt="" height="581" width="300">
-                    </div>
-                </div>
-            </div>
-        </div> <!-- /.container -->
-    </section> <!-- /#bigfeatures -->
 
-    <!-- HHHHHHHHHHHHHHHHHH        Speciality         HHHHHHHHHHHHHHHH -->
-    <div id="speciality" class="wrapper">
-        <div class="container">
-            <h2 class="animation-box wow bounceIn animated">TOP FEATURES</h2>
-            <div class="virticle-line"></div>
-            <div class="circle"></div>
-            <div class="row">
-                <div class="col-sm-4 wow animated fadeInLeft">
-                    <div class="special-icon">
-                        <i class="fa fa-pencil"></i>
-                    </div>
-                    <h3>Logging</h3>
+	<!-- ========== ABOUT SECTION ========== -->
+	<section id="about" name="about"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row">
+				<h3>ABOUT</h3>
+				<p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
+
+				<!-- INTRO INFORMATIO-->
+				<div class="col-lg-6 col-lg-offset-3">
+					<p>
+                        The Bullet Journal Companion Is The Ultimate App For Your Bullet Journal And Bridges The Analog And the Digital World.
+                    </p>
+                    <br>
                     <p>
-                        Log On Your Phone When You Don't Have Your Bullet Journal.
+                        Always have a place to put logs, notes, and pages when you don't have access to your bujo. The companion uses a clean and fast UI designed to be intuitive and easy to use. The goal of the app is to give bullet journal lovers a good digital tool designed for bullet journaling to help them with there bujo practice.
                     </p>
-                </div>
-                <div class="col-sm-4 animation-box wow bounceIn animated">
-                    <div class="special-icon">
-                        <i class="fa fa-check"></i>
-                    </div>
-                    <h3>Task List</h3>
                     <p>
-                        Quickly Create A Task List To Organize Your Life.
+                        We update the app often with new features and tools to help YOU be more productive and make life easier for you!
                     </p>
-                </div>
-                <div class="col-sm-4 wow animated fadeInRight">
-                    <div class="special-icon">
-                        <i class="fa fa-star"></i>
-                    </div>
-                    <h3>Notes</h3>
-                    <p>
-                        Write, Record Or Draw Important Notes And Save Them All In One Place.
-                    </p>
-                </div>
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /#speciality -->
+                    <a href='https://play.google.com/store/apps/details?id=com.com_hostsource.Bullet_Journal_Companion&hl=en_US&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png'/ id="download_btn"></a>
+				</div>
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/h8GUVbrPrsA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			</div>
+		</div><!-- /container -->
+	</div><!-- /f -->
 
 
-    <!-- HHHHHHHHHHHHHHHHHH        Features         HHHHHHHHHHHHHHHH -->
-    <section id="features" class="wrapper features">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-sm-6 wow animated fadeInLeft">
-                    <img src="img/mb2.png" width="700px" height="700px" alt="" class="pull-right left-img">
-                </div>
-                <div class="col-md-6 col-sm-6 wow animated fadeInRight">
-                    <div class="features-list">
-                        <h3>SIDEBAR</h3>
-                        <p>
-                            Simple & Accessible Sidebar.
-                        </p>
-                        <ul class="right">
-                            <li class="li"><i class="fa fa-chevron-right"></i> Acces From Everywhere In The App</li>
-                            <li class="li"><i class="fa fa-chevron-right"></i> Your Log's In A List</li>
-                            <li class="li"><i class="fa fa-chevron-right"></i> Quick Action To Logs</li>
-                            <li class="li"><i class="fa fa-chevron-right"></i> Quick Action To Pages</li>
-                            <li class="li"><i class="fa fa-chevron-right"></i> -=- To Notes</li>
-                            <li class="li"><i class="fa fa-chevron-right"></i> -=- To Tasks</li>
-                        </ul>
-                    </div> <!-- .features-list -->
-                </div>
-            </div> <!-- /.row -->
-            <div class="row">
-                <div class="col-md-6 col-sm-6 wow animated fadeInLeft">
-                    <div class="features-list-left">
-                        <h3>NOTES</h3>
-                        <p>
-                            Write Down Important Notes, And Thoughts.
-                        </p>
-                        <ul class="left">
-                            <li class="li">Text Notes With A Title <i class="fa fa-chevron-left"></i></li>
-                            <li class="li">Record A Notes <i class="fa fa-chevron-left"></i></li>
-                            <li class="li">Draw Something <i class="fa fa-chevron-left"></i></li>
-                        </ul>
-                    </div> <!-- .features-list -->
-                </div>
-                <div class="col-md-6 col-sm-6 wow animated fadeInRight">
-                    <img src="img/mb2v.png" width="700px" height="700px" alt="" class="pull-left right-img">
-                </div>
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section> <!-- /#features -->
+	<!-- ========== CAROUSEL SECTION ========== -->
+	<section id="portfolio" name="portfolio"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row centered">
+				<h3>Features</h3>
+				<p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
 
+				<div class="col-lg-6 col-lg-offset-3">
+					<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+						<!-- Wrapper for slides -->
+						<div class="carousel-inner">
+							<div class="item active centered">
+								<img class="img-responsive" src="assets/img/c1.jpeg" alt="The Log: Quickly write down thoughts and ideas.">
+							</div>
+							<div class="item centered">
+								<img class="img-responsive" src="assets/img/c2.jpeg" alt="Library: Save important pages from your Bullet Journal.">
+							</div>
+							<div class="item centered">
+								<img class="img-responsive" src="assets/img/c3.jpeg" alt="Notes: Text notes for bigger ideas.">
+							</div>
+                            <div class="item centered">
+								<img class="img-responsive" src="assets/img/c4.jpeg" alt="Tasks: Store your todo's and shopping lists.">
+							</div>
+                            <div class="item centered">
+								<img class="img-responsive" src="assets/img/c5.jpeg" alt="The Sidebar: Holds your logs and is accessible from anywhere.">
+							</div>
+                            <div class="item centered">
+								<img class="img-responsive" src="assets/img/c6.jpeg" alt="Quick Bar: Quickly navigate the app using the quick bar.">
+							</div>
+						</div>
+						<br>
+						<br>
+						<ol class="carousel-indicators">
+						    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+						    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="3"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="4"></li>
+                            <li data-target="#carousel-example-generic" data-slide-to="5"></li>
+						</ol>
+					</div>
+				</div><!-- col-lg-8 -->
+			</div><!-- row -->
+		</div><!-- container -->
+	</div>	<!-- f -->
 
-    <!-- HHHHHHHHHHHHHHHHHH      Screenshots    HHHHHHHHHHHHHHHH -->
+	<!-- ========== CONTACT SECTION ========== -->
+	<section id="contact" name="contact"></section>
+	<div id="f">
+		<div class="container">
+			<div class="row">
+				<h3>CONTACT</h3>
+				<p class="centered"><i class="icon icon-circle"></i><i class="icon icon-circle"></i><i class="icon icon-circle"></i></p>
 
-    <section id="gallery" class="wrapper">
-        <div class="container">
-            <h2 class="animation-box wow bounceIn animated">SCREENSHOTS</h2>
-            <div class="virticle-line"></div>
-            <div class="circle"></div>
-            <div class="row">
-                <div class="col-xs-12">
-                    <div id="screenshots" class="owl-carousel owl-theme">
-                      <a href="img/1.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/1.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/2.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/2.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/3.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/3.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/4.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/4.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/5.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/5.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/6.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/6.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/7.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/7.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/1.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/1.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/2.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/2.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/3.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/3.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/4.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/4.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                      <a href="img/5.jpg" class="item wow flipInY animated animated" data-lightbox-gallery="screenshots">
-                        <img src="img/5.jpg" class="img_res wow animated zoomIn" alt="" height="400px" width="400px">
-                      </a>
-                    </div>
-                     <div class="customNavigation row">
-                      <a class="btn prev gallery-nav wow animated bounceInLeft"><i class="fa fa-chevron-left"></i></a>
-                      <a class="btn next gallery-nav wow animated bounceInRight"><i class="fa fa-chevron-right"></i></a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+				<div class="col-lg-6 col-lg-offset-3">
+					<a href="https://gevosoft.com" target="blank"><p><i class="fa fa-link"></i>gevosoft.com</p></a>
+					<a href="mailto:contact@gevosoft.com"><p><i class="fa fa-envelope"></i>contact@gevosoft.com</p></a>
+                    <a href="https://github.com/GevosoftOfficial" target="blank"><p><i class="fa fa-github"></i>@GevosoftOfficial</p></a>
+                    <a href="mailto:contact@gevosoft.com"><p><button type="button" class="btn btn-warning">CONTACT US NOW!</button></p></a>
+				</div>
+			</div>
+		</div>
+	</div>
 
-
-    <!-- HHHHHHHHHHHHHHHHHHHH    Testimonial    HHHHHHHHHHHHHHHHHHHHHH -->
-     <section id="testimonial" class="wrapper">
-            <div class="container">
-                <div class="row main_content">
-                    <div class="col-md-8 col-md-offset-2">
-                        <div id="client-speech" class="owl-carousel owl-theme">
-                            <div class="item wow animated bounceInUp animated">
-                                <img class="img-circle img-responsive center-block test-img" src="img/test1.jpg" alt="text">
-                                <p class="client-comment text-center">
-                                   Thank You For Making A Bullet Journal Companion For Android Since The Bullet Journal People Didn't
-                                </p>
-                                <div class="row text-center">
-                                    <p class="client-name text-center">Anaya Mendoza</p>
-                                </div>
-                            </div>
-                            <div class="item wow animated bounceInUp animated">
-                                <img class="img-circle img-responsive center-block test-img" src="img/test2.jpg" alt="text">
-                                <p class="client-comment text-center">
-                                   Very Helpful! And A Great Way To Create A Record Ff Your Previews Bj
-                                </p>
-                                <div class="row text-center">
-                                    <p class="client-name text-center">Mck Razhel</p>
-                                </div>
-                            </div>
-                            <div class="item wow animated bounceInUp animated">
-                                <img class="img-circle img-responsive center-block test-img" src="img/test3.jpg" alt="text">
-                                <p class="client-comment text-center">
-                                   Super App! Super Great Help When It Did Not Work. Now it Works Perfectly! Thanks!
-                                </p>
-                                <div class="row text-center">
-                                    <p class="client-name text-center">Vanessa Heuser</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>  <!-- clients -->
-
-    <!-- HHHHHHHHHHHHHHHHHH      Development Team      HHHHHHHHHHHHHHHH -->
-
-    <div id="team" class="wrapper">
-        <div class="container-fluid">
-            <h2 class="animation-box wow bounceIn animated">A GEVOSOFT APPLICATION</h2>
-            <div class="virticle-line"></div>
-            <div class="circle"></div>
-            <div class="row">
-                <div class="col-md-2 col-sm-4 col-md-offset-3 wow animated fadeInLeft">
-                </div>
-                <div class="col-md-2 col-sm-4 animation-box wow bounceIn animated">
-                    <img src="https://gevosoft.ml/img/icon.ico" alt="team">
-                    <img src="img/icon-p.png" alt="icon-p" class="icon-p">
-                    <h3>Gevosoft</h3>
-                    <p>Technology Development</p>
-                    <div class="img-hover">
-                         <ul class="social-icon text-center">
-                            <li class="wow animated fadeInLeft facebook"><a href="https://instagram.com/Gevosoft"><i class="fa fa-instagram"></i></a></li>
-                            <li class="wow animated fadeInLeft twitter"><a href="https://github.com/GevosoftOfficial"><i class="fa fa-github"></i></a></li>
-                            <li class="wow animated fadeInRight linkedin"><a href="https://gevosoft.ml"><i class="fa fa-link"></i></a></li>
-                            <li class="wow animated fadeInRight googleplus"><a href="mailto:contact@gevosoft.ml"><i class="fa fa-envelope"></i></a></li>
-                        </ul>
-                        <img src="img/icon-m.png" alt="icon-m" class="icon-m">
-                    </div>
-                </div>
-                <div class="col-md-2 col-sm-4 wow animated fadeInRight">
-            </div> <!-- /.row -->
-        </div> <!-- /.container -->
-    </div> <!-- /#team -->
-  </div>
-
-
-<br>
-
-    <!-- HHHHHHHHHHHHHHHHHH        Contact Us          HHHHHHHHHHHHHHHH -->
-    <section id="contact" class="wrapper">
-        <div  class="container">
-            <div class="row">
-                <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInLeft">
-                    <i class="fa fa-envelope"></i>
-                    <h3>Email</h3>
-                    <p class="contact">
-                        <a href="mailto:contact@gevosoft.ml">contact@gevosoft.ml</a><br>
-                        <a href="mailto:support@gevosoft.ml">support@gevosoft.ml</a><br>
-                        <a href="mailto:hello@gevosoft.ml">hello@gevosoft.ml</a><br>
-                    </p>
-                </div>
-                <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInLeft">
-                    <i class="fa fa-globe"></i>
-                    <h3>Website</h3>
-                    <p class="contact">
-                        <a href="https://gevosoft.ml" target="blank">Gevosoft's Official Website</a>
-                    </p>
-                </div>
-                <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInRight">
-                    <i class="fa fa-instagram"></i>
-                    <h3>Instagram</h3>
-                    <p class="contact">
-                        <a href="https://instagram.com/Gevosoft" target="blank">@Gevosoft</a>
-                    </p>
-                </div>
-                <div class="col-md-3 contact-item col-sm-6 col-xs-12 wow animated fadeInRight">
-                    <i class="fa fa-github"></i>
-                    <h3>Github</h3>
-                    <p class="contact">
-                        <a href="https://github.com/GevosoftOfficial" target="blank">@GevosoftOfficial</a>
-                    </p>
-                </div>
-            </div> <!-- /.row -->
-            <form class="row form wrapper" action="https://formspree.io/com.gevosoft@gmail.com" method="POST">
-                <h3>Leave A Message</h3>
-                <div class="col-sm-4 col-xs-12 form-group">
-                    <label class="sr-only">Name</label>
-                    <input name="name" class="form-control" type="text" placeholder="First Name">
-                </div> <!-- /.form-group -->
-                <div class="col-sm-4 col-xs-12 form-group">
-                    <label class="sr-only">Email</label>
-                    <input name="email" class="form-control" type="email" placeholder="Email address">
-                </div> <!-- /.form-group -->
-                <div class="row">
-                    <div class="col-md-12 col-xs-12 form-group">
-                        <label class="sr-only">Message</label>
-                        <textarea class="message form-control" placeholder="Write message" name="comment"></textarea>
-                    </div> <!-- /.form-group -->
-                    <input class="btn btn-sub" type="submit" value="Send Message">
-                </div>
-            </form> <!-- /.row -->
-        </div> <!-- /.container -->
-    </section> <!-- /#contact -->
-
-    <!-- HHHHHHHHHHHHHHHHHH        Footer          HHHHHHHHHHHHHHHH -->
-
-    <section id="footer" class="wrapper">
-        <div class="container text-center">
-            <div class="footer-logo">
-                <h1 class="text-center animation-box wow bounceIn animated">Bullet Journal Companion</h1>
-            </div>
-            <ul class="social-icons text-center">
-                <li class="wow animated fadeInLeft instagram"><a href="https://instagram.com/Gevosoft"><i class="fa fa-instagram"></i></a></li>
-                <li class="wow animated fadeInRight github"><a href="https://github.com/GevosoftOfficial"><i class="fa fa-github"></i></a></li>
-                <li class="wow animated fadeInLeft website"><a href="https://gevosoft.ml"><i class="fa fa-globe"></i></a></li>
-                <li class="wow animated fadeInRight envelope"><a href="mailto:contact@gevosoft.ml"><i class="fa fa-envelope"></i></a></li>
-                <li class="wow animated fadeInLeft link"><a href="http://bujoabout.ml"><i class="fa fa-link"></i></a></li>
-            </ul>
-
-            <div class="copyright">
-                <div class="credits" style="font-size: 10px;">
-                    The Name Bullet Journal<i class="fa fa-registred"></i> is owned by <a href="http://bulletjournal.com" target="_blank">BulletJournal.com And This is a third-party application developed by Gevosoft.</a><br>Design By <a href="https://logomakr.com" target="blank">LOGOMAKR</a>
-                </div>
-                <div style="font-size: 30px;">©2019 Gevosoft, All Rights Reserved</div>
-            </div>
-        </div><!-- container -->
+    <!-- ========== FOOTER SECTION ========== -->
+	<section id="footer" name="footer">
+        <footer>
+            <h3>&copy; Gevosoft 2019</h3>
+            <p>The name Bullet Journal is owned by Bulletjournal.com</p>
+        </footer>
     </section>
 
 
 
-
-
-
-
-
-    <!-- HHHHHHHHHHHHHHHHHH        Open/Close          HHHHHHHHHHHHHHHH -->
-    <div class="overlay overlay-hugeinc">
-        <button type="button" class="overlay-close">Close</button>
-        <nav>
-        <ul>
-            <li class="hideit"><a href="#header">Home</a></li>
-            <li class="hideit"><a href="#bigfeatures">Feature</a></li>
-            <li class="hideit"><a href="#speciality">Top Features</a></li>
-            <li class="hideit"><a href="#gallery">Gallery</a></li>
-            <li class="hideit"><a href="#testimonial">Testimonial</a></li>
-            <!-- <li class="hideit"><a href="#team">Team</a></li> -->
-            <li class="hideit"><a href="#contact">Contact Us</a></li>
-        </ul>
-        </nav>
-    </div>
-    <script src="js/jquery-1.11.2.min.js"></script>
-    <script src="js/wow.min.js"></script>
-    <script src="js/owl-carousel.js"></script>
-    <script src="js/nivo-lightbox.min.js"></script>
-    <script src="js/smoothscroll.js"></script>
-    <!--<script src="js/jquery.ajaxchimp.min.js"></script>-->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/classie.js"></script>
-    <script src="js/script.js"></script>
-    <script>
-        new WOW().init();
-    </script>
-    <script>
-        $(document).ready(function(){
-            $(".hideit").click(function(){
-                $(".overlay").hide();
-            });
-            $("#trigger-overlay").click(function(){
-                $(".overlay").show();
-            });
-        });
-    </script>
-    <script>
-        $(document).ready(function(){
-
-          var kawa = $('.top-bar');
-          var back = $('#back-to-top');
-          function scroll() {
-             if ($(window).scrollTop() > 700) {
-                kawa.addClass('fixed');
-                back.addClass('show-top');
-
-             } else {
-                kawa.removeClass('fixed');
-                back.removeClass('show-top');
-             }
-          }
-
-          document.onscroll = scroll;
-        });
-    </script>
-    <!--HHHHHHHHHHHH        Smooth Scrooling     HHHHHHHHHHHHHHHH-->
-    <script>
-        $(function() {
-          $('a[href*=#]:not([href=#])').click(function() {
-            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-              var target = $(this.hash);
-              target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-              if (target.length) {
-                $('html,body').animate({
-                  scrollTop: target.offset().top
-                }, 1000);
-                return false;
-              }
-            }
-          });
-        });
-    </script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<script src="assets/js/classie.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <!-- <script src="assets/js/smoothscroll.js"></script> -->
+	<script src="assets/js/main.js"></script>
 </body>
 </html>
